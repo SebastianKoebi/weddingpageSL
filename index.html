@@ -58,6 +58,37 @@
         </div>
     </section>
 
+    <section class="guest-registration">
+        <div class="container">
+            <h2>Anmeldung für Hochzeitsgäste</h2>
+            <form name="wedding-rsvp" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="wedding-rsvp">
+                <!-- Name des Hauptgastes -->
+                <label for="name">Ihr Name:</label>
+                <input type="text" id="name" name="name" placeholder="Max Mustermann" required>
+                
+                <!-- E-Mail-Adresse -->
+                <label for="email">Ihre E-Mail-Adresse:</label>
+                <input type="email" id="email" name="email" placeholder="max@beispiel.com" required>
+                
+                <!-- Anzahl der Gäste -->
+                <label for="guests">Anzahl der Gäste (inkl. Ihnen):</label>
+                <input type="number" id="guests" name="guests" min="1" max="10" required>
+                
+                <!-- Namen der zusätzlichen Gäste -->
+                <label for="guest-names">Namen der zusätzlichen Gäste:</label>
+                <textarea id="guest-names" name="guest-names" placeholder="Name 1, Name 2, ..." rows="4"></textarea>
+                
+                <!-- Nachricht oder Kommentar -->
+                <label for="message">Nachricht (optional):</label>
+                <textarea id="message" name="message" placeholder="Teilen Sie uns etwas mit!" rows="4"></textarea>
+                
+                <!-- Absenden-Button -->
+                <button type="submit">Anmelden</button>
+            </form>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <p>Wir freuen uns auf euch! Kontaktiert uns bei Fragen: [Deine E-Mail]</p>
