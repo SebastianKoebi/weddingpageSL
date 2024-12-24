@@ -7,92 +7,100 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
+    <!-- Sprachumschaltung -->
+    <div class="language-switch">
+        <button id="btn-de" class="language-button active">Deutsch</button>
+        <button id="btn-pt" class="language-button">Português</button>
+    </div>
+
+    <!-- Header -->
+    <header class="header" data-lang="de">
         <div class="container">
             <h1>Willkommen zu unserer Hochzeit</h1>
             <p>Wir freuen uns, diesen besonderen Tag mit euch zu teilen!</p>
         </div>
     </header>
+    <header class="header" data-lang="pt" style="display: none;">
+        <div class="container">
+            <h1>Bem-vindo ao nosso casamento</h1>
+            <p>Estamos muito felizes em compartilhar este dia especial com você!</p>
+        </div>
+    </header>
 
-    <section class="about-us">
+    <!-- Über uns -->
+    <section class="about-us" data-lang="de">
         <div class="container">
             <img src="unseresfoto.jpg" alt="Foto von uns" class="hero-image">
             <h2>Über uns</h2>
             <p>Wir, Larissa & Sebastian, freuen uns darauf, unser Leben zusammen zu verbringen und möchten diesen Tag mit unseren Liebsten feiern.</p>
         </div>
     </section>
+    <section class="about-us" data-lang="pt" style="display: none;">
+        <div class="container">
+            <img src="unseresfoto.jpg" alt="Foto de nós dois" class="hero-image">
+            <h2>Sobre nós</h2>
+            <p>Nós, Larissa & Sebastian, estamos animados para passar nossas vidas juntos e queremos comemorar este dia com nossos entes queridos.</p>
+        </div>
+    </section>
 
-    <section class="details">
+    <!-- Details -->
+    <section class="details" data-lang="de">
         <div class="container">
             <h2>Details</h2>
             <div class="detail-item">
                 <h3>Location</h3>
-                <p>Die Hochzeit findet am 27.04.2025 in Baden-Baden statt.
-				Wir werden auf der wunderschönen Location von Kitchen and Soul feiern, das kleine Anwesen liegt etwas abgelegen hinter Baden-Baden von Wald und Weinbergen umgeben.
-				Es gibt genügend Parkplätze und auch zwei Räume zum Rückzug. Die Trauung wird im angrenzenden Garten stattfinden. Für eine Schlechtwetter Alternative ist gesorgt.
-				Adresse: Eckhöfe 12, 76534 Baden-Baden</p>
+                <p>Die Hochzeit findet am 27.04.2025 in Baden-Baden statt. Adresse: Eckhöfe 12, 76534 Baden-Baden.</p>
             </div>
             <div class="detail-item">
                 <h3>Programm</h3>
                 <ul>
                     <li>13:30 – Trauung</li>
                     <li>15:00 – Empfang - Überraschung</li>
-					<li>16:00 – Gruppenfotos</li>
-					<li>17:00 – Party</li>
-                    <li>18:00 – Abendessen</li>
-                    <li>20:00 – Party</li>
-					<li>24:00 – Mitternachtsnack - Abschlussevent</li>
-					<li>24:30 – Tanzen</li>
+                    <li>16:00 – Gruppenfotos</li>
+                    <li>17:00 – Party</li>
                 </ul>
-                <p>Die Party wollen wir gemeinsam mit euch gestalten. Wir würden uns sehr über Beiträge jeglicher Art freuen, meldet euch einfach bei Bella Cabrera Maier [Email, Telefonnummer].<p>
             </div>
             <div class="detail-item">
                 <h3>Menü</h3>
-                <p>Es erwartet uns ein leckeres vegetarisches Buffet mit verschiedenen Optionen. Falls du spezielle Ernährungsbedürfnisse hast, lass es uns gerne wissen.</p>
+                <p>Es erwartet uns ein leckeres vegetarisches Buffet mit verschiedenen Optionen.</p>
+            </div>
+        </div>
+    </section>
+    <section class="details" data-lang="pt" style="display: none;">
+        <div class="container">
+            <h2>Detalhes</h2>
+            <div class="detail-item">
+                <h3>Localização</h3>
+                <p>O casamento acontecerá em 27.04.2025 em Baden-Baden. Endereço: Eckhöfe 12, 76534 Baden-Baden.</p>
             </div>
             <div class="detail-item">
-                <h3>Geschenkliste</h3>
-                <p>Wir freuen uns über jegliches Geschenk, besonders über das Geschenk eurer Anwesenheit 😊
-                    Falls ihr Inspiration für Geschenke sucht hier ein paar Vorschläge: THERMOMIX, Druckkochtopf, besonders freuen wir uns über einen Beitrag zu unserem Honeymoon-Fonds.</p>
+                <h3>Programação</h3>
+                <ul>
+                    <li>13:30 – Cerimônia</li>
+                    <li>15:00 – Recepção - Surpresa</li>
+                    <li>16:00 – Fotos em grupo</li>
+                    <li>17:00 – Festa</li>
+                </ul>
+            </div>
+            <div class="detail-item">
+                <h3>Cardápio</h3>
+                <p>Teremos um delicioso buffet vegetariano com várias opções.</p>
             </div>
         </div>
     </section>
 
-    <section class="guest-registration">
-        <div class="container">
-            <h2>Anmeldung für Hochzeitsgäste</h2>
-            <form name="wedding-rsvp" method="POST" data-netlify="true">
-                <input type="hidden" name="form-name" value="wedding-rsvp">
-                <!-- Name des Hauptgastes -->
-                <label for="name">Ihr Name:</label>
-                <input type="text" id="name" name="name" placeholder="Max Mustermann" required>
-                
-                <!-- E-Mail-Adresse -->
-                <label for="email">Ihre E-Mail-Adresse:</label>
-                <input type="email" id="email" name="email" placeholder="max@beispiel.com" required>
-                
-                <!-- Anzahl der Gäste -->
-                <label for="guests">Anzahl der Gäste (inkl. Ihnen):</label>
-                <input type="number" id="guests" name="guests" min="1" max="10" required>
-                
-                <!-- Namen der zusätzlichen Gäste -->
-                <label for="guest-names">Namen der zusätzlichen Gäste:</label>
-                <textarea id="guest-names" name="guest-names" placeholder="Name 1, Name 2, ..." rows="4"></textarea>
-                
-                <!-- Nachricht oder Kommentar -->
-                <label for="message">Nachricht (optional):</label>
-                <textarea id="message" name="message" placeholder="Teilen Sie uns etwas mit!" rows="4"></textarea>
-                
-                <!-- Absenden-Button -->
-                <button type="submit">Anmelden</button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer" data-lang="de">
         <div class="container">
             <p>Wir freuen uns auf euch! Kontaktiert uns bei Fragen: [Deine E-Mail]</p>
         </div>
     </footer>
+    <footer class="footer" data-lang="pt" style="display: none;">
+        <div class="container">
+            <p>Estamos ansiosos para vê-lo! Entre em contato conosco se tiver dúvidas: [Seu E-Mail]</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
