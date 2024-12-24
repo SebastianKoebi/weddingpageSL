@@ -93,67 +93,55 @@ body {
     border-radius: 5px;
 }
 
-/* Guest Registration Section */
-.guest-registration {
-    background-color: #F5F5DC; /* Gleiche Hintergrundfarbe wie die Details-Sektion */
+/* RSVP-Formular */
+.rsvp {
+    background-color: #fdf6e3;
     padding: 50px 0;
     text-align: center;
 }
 
-.guest-registration .container {
+.rsvp .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #E9967A; /* Farbliche Verbindung zum Header */
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.guest-registration h2 {
+.rsvp h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #E9967A; /* Gleiche Farbe wie der Header */
 }
 
-.guest-registration label {
-    display: block;
+.rsvp form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rsvp label {
+    font-size: 1.1em;
     text-align: left;
-    font-weight: bold;
-    margin-top: 15px;
 }
 
-.guest-registration input,
-.guest-registration textarea,
-.guest-registration button {
-    width: 100%;
+.rsvp input, .rsvp textarea, .rsvp button {
+    font-size: 1em;
     padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
+    width: 100%;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1em;
     box-sizing: border-box;
 }
 
-.guest-registration input:focus,
-.guest-registration textarea:focus {
-    border-color: #E9967A; /* Fokusfarbe */
-    outline: none;
-}
-
-.guest-registration button {
-    background-color: #E9967A;
+.rsvp button {
+    background-color: #e9967a;
     color: white;
-    font-size: 1.2em;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.guest-registration button:hover {
-    background-color: #CD5C5C; /* Etwas dunklere Farbe bei Hover */
+.rsvp button:hover {
+    background-color: #cd5c5c;
 }
+
 
 /* Language Switch */
 .language-switch {
