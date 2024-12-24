@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".language-button");
     const sections = document.querySelectorAll("[data-lang]");
