@@ -155,6 +155,27 @@ body {
     background-color: #CD5C5C; /* Etwas dunklere Farbe bei Hover */
 }
 
+/* Language Switch */
+.language-switch {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.language-button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+    border: 2px solid #E9967A;
+    border-radius: 5px;
+    background-color: white;
+    color: #E9967A;
+    cursor: pointer;
+}
+
+.language-button.active {
+    background-color: #E9967A;
+    color: white;
+}
 
 /* Footer */
 .footer {
