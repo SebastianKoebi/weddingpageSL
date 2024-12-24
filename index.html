@@ -49,7 +49,7 @@
             <h2>Details</h2>
             <div class="detail-item">
                 <h3>Location</h3>
-                <p>Die Hochzeit findet am 27.04.2025 in Baden-Baden statt. Adresse: Eckhöfe 12, 76534 Baden-Baden.</p>
+                <p>Die Hochzeit findet am 27.04.2025 in Baden-Baden statt. Wir werden auf der wunderschönen Location von Kitchen and Soul feiern, das kleine Anwesen liegt etwas abgelegen hinter Baden-Baden von Wald und Weinbergen umgeben. Es gibt genügend Parkplätze und auch zwei Räume zum Rückzug. Die Trauung wird im angrenzenden Garten stattfinden. Für eine Schlechtwetter Alternative ist gesorgt. Adresse: Eckhöfe 12, 76534 Baden-Baden.</p>
             </div>
             <div class="detail-item">
                 <h3>Programm</h3>
@@ -58,11 +58,19 @@
                     <li>15:00 – Empfang - Überraschung</li>
                     <li>16:00 – Gruppenfotos</li>
                     <li>17:00 – Party</li>
+                    <li>18:00 – Abendessen</li>
+                    <li>20:00 – Party</li>
+                    <li>24:00 – Mitternachtsnack - Abschlussevent</li>
+                    <li>24:30 – Tanzen</li>
                 </ul>
             </div>
             <div class="detail-item">
                 <h3>Menü</h3>
-                <p>Es erwartet uns ein leckeres vegetarisches Buffet mit verschiedenen Optionen.</p>
+                <p>Es erwartet uns ein leckeres vegetarisches Buffet mit verschiedenen Optionen. Falls du spezielle Ernährungsbedürfnisse hast, lass es uns gerne wissen.</p>
+            </div>
+            <div class="detail-item">
+                <h3>Geschenkliste</h3>
+                <p>Wir freuen uns über jegliches Geschenk, besonders über das Geschenk eurer Anwesenheit 😊 Falls ihr Inspiration für Geschenke sucht hier ein paar Vorschläge: THERMOMIX, Druckkochtopf, besonders freuen wir uns über einen Beitrag zu unserem Honeymoon-Fonds.</p>
             </div>
         </div>
     </section>
@@ -71,7 +79,7 @@
             <h2>Detalhes</h2>
             <div class="detail-item">
                 <h3>Localização</h3>
-                <p>O casamento acontecerá em 27.04.2025 em Baden-Baden. Endereço: Eckhöfe 12, 76534 Baden-Baden.</p>
+                <p>O casamento acontecerá em 27.04.2025 em Baden-Baden. Vamos celebrar no maravilhoso espaço Kitchen and Soul, uma propriedade cercada por florestas e vinhedos. Há estacionamento suficiente e duas salas para descanso. A cerimônia será no jardim adjacente, com uma alternativa em caso de mau tempo. Endereço: Eckhöfe 12, 76534 Baden-Baden.</p>
             </div>
             <div class="detail-item">
                 <h3>Programação</h3>
@@ -80,15 +88,73 @@
                     <li>15:00 – Recepção - Surpresa</li>
                     <li>16:00 – Fotos em grupo</li>
                     <li>17:00 – Festa</li>
+                    <li>18:00 – Jantar</li>
+                    <li>20:00 – Festa</li>
+                    <li>24:00 – Lanche da meia-noite - Evento final</li>
+                    <li>24:30 – Dança</li>
                 </ul>
             </div>
             <div class="detail-item">
                 <h3>Cardápio</h3>
-                <p>Teremos um delicioso buffet vegetariano com várias opções.</p>
+                <p>Teremos um delicioso buffet vegetariano com várias opções. Caso tenha necessidades dietéticas específicas, avise-nos.</p>
+            </div>
+            <div class="detail-item">
+                <h3>Lista de presentes</h3>
+                <p>Agradecemos qualquer presente, especialmente a sua presença 😊 Se precisar de inspiração para presentes, aqui estão algumas sugestões: THERMOMIX, panela de pressão ou uma contribuição para nosso fundo de lua de mel.</p>
             </div>
         </div>
     </section>
 
+    <!-- Anmeldeformular -->
+    <section class="rsvp" data-lang="de">
+        <div class="container">
+            <h2>Anmeldung zur Hochzeit</h2>
+            <form method="POST" action="/success" data-netlify="true">
+                <input type="hidden" name="form-name" value="hochzeitsanmeldung">
+                <label for="name">Dein Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="guests">Anzahl der Gäste (inklusive dir):</label>
+                <input type="number" id="guests" name="guests" min="1" max="10" required>
+                
+                <label for="guest-names">Namen der Gäste:</label>
+                <textarea id="guest-names" name="guest-names" placeholder="Bitte Namen der Gäste angeben" required></textarea>
+                
+                <label for="email">Deine E-Mail-Adresse:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Bemerkungen oder spezielle Anforderungen:</label>
+                <textarea id="message" name="message" placeholder="Optional"></textarea>
+                
+                <button type="submit">Anmelden</button>
+            </form>
+        </div>
+    </section>
+    <section class="rsvp" data-lang="pt" style="display: none;">
+        <div class="container">
+            <h2>Confirmação de Presença</h2>
+            <form method="POST" action="/success" data-netlify="true">
+                <input type="hidden" name="form-name" value="hochzeitsanmeldung">
+                <label for="name">Seu Nome:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="guests">Número de convidados (incluindo você):</label>
+                <input type="number" id="guests" name="guests" min="1" max="10" required>
+                
+                <label for="guest-names">Nomes dos Convidados:</label>
+                <textarea id="guest-names" name="guest-names" placeholder="Por favor, insira os nomes dos convidados" required></textarea>
+                
+                <label for="email">Seu E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Comentários ou necessidades especiais:</label>
+                <textarea id="message" name="message" placeholder="Opcional"></textarea>
+                
+                <button type="submit">Confirmar Presença</button>
+            </form>
+        </div>
+    </section>
+    
     <!-- Footer -->
     <footer class="footer" data-lang="de">
         <div class="container">
