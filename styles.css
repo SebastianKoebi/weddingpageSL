@@ -3,14 +3,14 @@ body {
     font-family: 'Monaco', Monospace;
     margin: 0;
     padding: 10px;
-    background-color: #faefd2;
+    background-color: #F5F3F1;
     color: #333;
     line-height: 1.6;
 }
 
 /* Header */
 .header {
-    background-color: #E9967A;
+    background-color: #6e7e71;
     color: white;
     padding: 50px 0;
     text-align: center;
@@ -57,7 +57,7 @@ body {
 
 /* Details Section */
 .details {
-    background-color: F5F5DC;
+    background-color: #eccfd2;
     padding: 50px 0;
 }
 
@@ -153,21 +153,21 @@ body {
     padding: 10px 20px;
     margin: 5px;
     font-size: 1em;
-    border: 2px solid #E9967A;
+    border: 2px solid #6e7e71;
     border-radius: 5px;
     background-color: white;
-    color: #E9967A;
+    color: #6e7e71;
     cursor: pointer;
 }
 
 .language-button.active {
-    background-color: #E9967A;
+    background-color: #6e7e71;
     color: white;
 }
 
 /* Footer */
 .footer {
-    background-color: #CD5C5C;
+    background-color: #eccfd2;
     color: white;
     text-align: center;
     padding: 30px 0;
@@ -175,4 +175,62 @@ body {
 
 .footer p {
     margin: 0;
+}
+
+
+/* Diashow-Container */
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Slides */
+.slide {
+    display: none;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Navigation-Pfeile */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Animation */
+.fade {
+    animation: fadeEffect 1.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
 }
