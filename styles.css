@@ -95,7 +95,7 @@ body {
 
 /* RSVP-Formular */
 .rsvp {
-    background-color: #fdf6e3;
+    background-color: #F5F3F1;
     padding: 50px 0;
     text-align: center;
 }
@@ -131,7 +131,7 @@ body {
 }
 
 .rsvp button {
-    background-color: #e9967a;
+    background-color: #6e7e71;
     color: white;
     border: none;
     cursor: pointer;
