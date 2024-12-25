@@ -181,19 +181,22 @@ body {
 /* Slideshow-Container */
 .slideshow-container {
     position: relative;
-    /*max-width: 60vw; /* 60% der Breite des Viewports */
-    max-height: 70vw; /* 70% der Höhe des Viewports */
-    width: auto;
+    width: 100%; /* Slideshow nimmt die gesamte Breite ein */
+    height: 70vh; /* Höhe beträgt 70% der Bildschirmhöhe */
     margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Optional: Hintergrundfarbe für leere Bereiche */
 }
 
 /* Slides */
 .slide img {
-    width: auto; /* Bilder nehmen die gesamte Breite des Containers ein */
-    height: 100%; /* Höhe wird proportional skaliert */
-    object-fit: cover; /* Füllt den verfügbaren Bereich gleichmäßig */
+    width: auto; /* Breite wird proportional zur Höhe angepasst */
+    height: 100%; /* Bild nimmt 100% der Container-Höhe ein */
+    object-fit: contain; /* Bild wird vollständig angezeigt, mit schwarzen Rändern falls nötig */
     border-radius: 10px; /* Optionale Abrundung der Ecken */
 }
 
@@ -210,6 +213,7 @@ body {
     font-size: 1.5em;
     border-radius: 50%;
     user-select: none;
+    z-index: 10;
 }
 
 .prev {
