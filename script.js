@@ -30,13 +30,13 @@ function changeSlide(n) {
     slideIndex += n;
 
     // Wenn über das letzte Bild hinausgegangen wird, zurück zum ersten
-    if (slideIndex >= slides.length) {
+    if (slideIndex >= 10) {
         slideIndex = 0;
     }
 
     // Wenn vor das erste Bild gewechselt wird, zum letzten springen
     if (slideIndex < 0) {
-        slideIndex = slides.length - 1;
+        slideIndex = 9;
     }
 
     showSlide(slideIndex);
