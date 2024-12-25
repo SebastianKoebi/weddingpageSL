@@ -23,27 +23,46 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 let slideIndex = 0;
-showSlides(slideIndex);
 
-// Nächste/Vorherige Steuerung
+// Funktion zum Ändern der Slides
 function changeSlide(n) {
-    showSlides(slideIndex += n);
-}
-
-// Automatische Slideshow
-function showSlides(n) {
     const slides = document.querySelectorAll(".slide");
-    if (n >= slides.length) {
+    slideIndex += n;
+
+    // Wenn über das letzte Bild hinausgegangen wird, zurück zum ersten
+    if (slideIndex >= slides.length) {
         slideIndex = 0;
-    } 
-    if (n < 0) {
+    }
+
+    // Wenn vor das erste Bild gewechselt wird, zum letzten springen
+    if (slideIndex < 0) {
         slideIndex = slides.length - 1;
     }
-    slides.forEach(slide => slide.style.display = "none");
-    slides[slideIndex].style.display = "block";
+
+    showSlide(slideIndex);
 }
 
-// Starten der automatischen Slideshow
-setInterval(() => {
-    changeSlide(1);
-}, 5000); // 5 Sekunden pro Bild
+// Funktion zum Anzeigen eines spezifischen Slides
+function showSlide(index) {
+    const slides = document.querySelectorAll(".slide");
+
+    // Alle Slides ausblenden
+    slides.forEach(slide => {
+        slide.style.display = "none";
+    });
+
+    // Nur das aktuelle Slide anzeigen
+    slides[index].style.display = "block";
+}
+
+// Automatische Slideshow alle 5 Sekunden
+function autoSlide() {
+    changeSlide(1); // Zum nächsten Slide wechseln
+    setTimeout(autoSlide, 5000); // Wiederholung nach 5 Sekunden
+}
+
+// Start der Slideshow
+document.addEventListener("DOMContentLoaded", () => {
+    showSlide(slideIndex); // Zeige das erste Bild
+    autoSlide(); // Start der automatischen Rotation
+});
