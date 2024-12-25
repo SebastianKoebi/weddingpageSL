@@ -181,6 +181,7 @@ body {
 /* Slideshow-Container */
 .slideshow-container {
     position: relative;
+    max-width: 1000px;
     width: 100%; /* Slideshow nimmt die gesamte Breite ein */
     height: 80vh; /* Höhe beträgt 70% der Bildschirmhöhe */
     margin: 20px auto;
