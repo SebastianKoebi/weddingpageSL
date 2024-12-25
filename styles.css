@@ -182,14 +182,14 @@ body {
 .slideshow-container {
     position: relative;
     width: 100%; /* Slideshow nimmt die gesamte Breite ein */
-    height: 70vh; /* Höhe beträgt 70% der Bildschirmhöhe */
+    height: 80vh; /* Höhe beträgt 70% der Bildschirmhöhe */
     margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000; /* Optional: Hintergrundfarbe für leere Bereiche */
+    background-color: #F5F3F1; /* Optional: Hintergrundfarbe für leere Bereiche */
 }
 
 /* Slides */
