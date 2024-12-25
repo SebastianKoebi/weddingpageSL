@@ -194,8 +194,8 @@ body {
 
 /* Slides */
 .slide img {
-    /* width: auto; /* Breite wird proportional zur Höhe angepasst */
-    /* height: 100%; /* Bild nimmt 100% der Container-Höhe ein */
+    width: 100%; /* Breite wird proportional zur Höhe angepasst */
+    height: 100%; /* Bild nimmt 100% der Container-Höhe ein */
     object-fit: contain; /* Bild wird vollständig angezeigt, mit schwarzen Rändern falls nötig */
     border-radius: 10px; /* Optionale Abrundung der Ecken */
 }
